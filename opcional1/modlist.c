@@ -17,7 +17,7 @@
 #define proc_entry_name "modlist"
 #define streq(a,b) (strcmp((a),(b)) == 0)
 
-MODULE_AUTHOR("R.S.R."),
+MODULE_AUTHOR("R.S.R.");
 MODULE_DESCRIPTION("Implementa una lista de enteros ordenables en un módulo"\
 					"de kernel administrable por una entrada en /proc");
 MODULE_LICENSE("GPL");

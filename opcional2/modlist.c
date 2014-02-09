@@ -17,7 +17,7 @@
 #define proc_entry_name "modlist"
 #define streq(a,b) (strcmp((a),(b)) == 0)
 
-MODULE_AUTHOR("R.S.R."),
+MODULE_AUTHOR("R.S.R.");
 MODULE_DESCRIPTION("Implementa una lista de cadenas fijas en un módulo"\
 					"de kernel administrable por una entrada en /proc");
 MODULE_LICENSE("GPL");
@@ -113,7 +113,7 @@ int procfile_write(struct file *file, const char __user *buffer,
 	
 	sscanf(line,"%7s %"DATA_SIZE_STR"s", command, data);
 	
-	DBG("\t [i]-evento pedido: %s [%d]",command, num);
+	DBG("\t [i]-evento pedido: %s ",command);
 	
 	if(streq(command,"add")){
 		add_item_list(&mylist, data);
